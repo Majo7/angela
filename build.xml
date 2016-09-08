@@ -1,0 +1,28 @@
+Xml version = " 1.0 " codificación = " UTF-8 " ?>
+
+< Proyecto  nombre = " integracioncontinua-Tarea "  default = " default "  basedir = " . " >
+    < Descripción > Construye, pruebas, y se ejecuta el proyecto integracioncontinua-Tarea. </ Description >
+    < Importación  de archivos = " nbproject / build-impl.xml " />
+   
+        <Nombre de destino = "- después de la compilación">
+            <Obfuscate>
+                <Conjunto de archivos dir = "$ {} build.classes.dir" />
+            </ Obfuscate>
+        </ Target>
+    nbproject / build-impl.xml archivo. 
+ 
+      -init-macrodef-javac: define macro de compilación javac
+      -init-macrodef-junit: define macro para la ejecución junit
+      -init-macrodef-debug: define macro para la depuración de clases
+      -init-macrodef-java: define macro para la ejecución de clases
+      -do-jar: edificio JAR
+      ejecute: ejecución del proyecto 
+      -javadoc-build: generación Javadoc
+      prueba de informe: la generación de informes JUnit
+      <Meta name = "ejecución" depende = "integracioncontinua-Tarea-impl.jar">
+            <Exec dir = "bin" ejecutable = "launcher.exe">
+                <Arg file = "$ {} dist.jar" />
+            </ Exec>
+        </ Target>
+    ->
+</ Proyecto >
